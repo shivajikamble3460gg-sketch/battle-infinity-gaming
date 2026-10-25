@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battle Infinity Gaming</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080b16;
+  color: white;
+}
+header {
+  padding: 20px 15px;
+  background: #11162a;
+  border-bottom: 2px solid #00eaff;
+  text-align: center;
+}
+.logo {
+  color: #00eaff;
+  font-size: 25px;
+  font-weight: bold;
+}
+nav {
+  margin-top: 15px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 14px;
+}
+.hero {
+  text-align: center;
+  padding: 55px 18px;
+  background: radial-gradient(ellipse, #20275b, #080b16 75%);
+}
+.hero h1 {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+.hero h1 span {
+  color: #00eaff;
+}
+.hero p {
+  color: #c6c9dc;
+  line-height: 1.6;
+}
+.btn {
+  display: inline-block;
+  background: #00eaff;
+  color: #080b16;
+  border: none;
+  padding: 13px 22px;
+  margin-top: 15px;
+  border-radius: 7px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+section {
+  padding: 25px 16px;
+}
+h2 {
+  color: #00eaff;
+}
+.games {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+.card {
+  background: #151b30;
+  border: 1px solid #303957;
+  padding: 17px 12px;
+  border-radius: 12px;
+  text-align: center;
+}
+.game-icon {
+  font-size: 42px;
+  margin: 8px;
+}
+.card h3 {
+  font-size: 17px;
+}
+.card p {
+  color: #bfc6dc;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.card .btn {
+  padding: 10px 12px;
+  font-size: 13px;
+}
+#message {
+  color: #00eaff;
+  line-height: 1.6;
+  margin-top: 18px;
+}
+footer {
+  text-align: center;
+  padding: 22px 10px;
+  color: #aab1c7;
+  background: #11162a;
+  font-size: 13px;
+}
+@media (max-width: 350px) {
+  .games {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 29px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">⚡ BATTLE INFINITY</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#games">Games</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <h1>ENTER THE <span>BATTLE</span></h1>
+  <p>Your gaming world starts here.<br>
+  Explore games and challenge yourself!</p>
+  <a class="btn" href="#games">EXPLORE GAMES</a>
+</div>
+
+<section id="games">
+  <h2>🎮 Featured Games</h2>
+  <div class="games">
+
+    <div class="card">
+      <div class="game-icon">🚀</div>
+      <h3>Space Battle</h3>
+      <p>Get ready for a space adventure.</p>
+      <button class="btn" onclick="openGame('Space Battle')">Play Now</button>
+    </div>
+
+    <div class="card">
+      <div class="game-icon">🏎️</div>
+      <h3>Speed Racing</h3>
+      <p>Discover the world of racing.</p>
+      <button class="btn" onclick="openGame('Speed Racing')">Play Now</button>
+    </div>
+
+    <div class="card">
+      <div class="game-icon">🧩</div>
+      <h3>Brain Puzzle</h3>
+      <p>Test your puzzle-solving skills.</p>
+      <button class="btn" onclick="openGame('Brain Puzzle')">Play Now</button>
+    </div>
+
+    <div class="card">
+      <div class="game-icon">⚔️</div>
+      <h3>Battle Arena</h3>
+      <p>Prepare for your next challenge.</p>
+      <button class="btn" onclick="openGame('Battle Arena')">Play Now</button>
+    </div>
+
+  </div>
+  <p id="message">Choose a game to get started!</p>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>Welcome to Battle Infinity Gaming!
+  This is our gaming website, built for players
+  who love fun, challenges and adventure.</p>
+</section>
+
+<footer>
+  © 2026 Battle Infinity Gaming
+  <br>Made with passion for gaming.
+</footer>
+
+<script>
+function openGame(name) {
+  const message = document.getElementById("message");
+  message.textContent =
+    name + " selected! A playable game will be added soon.";
+}
+</script>
+
+</body>
+</html>
